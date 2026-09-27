@@ -1,0 +1,32 @@
+equipe = [
+          [
+           {"nome":"Ana","linhas_dia":120,"linhas_mes":2400},
+           {"nome":"Bruno","linhas_dia":95,"linhas_mes":1900}
+          ],
+          [
+           {"nome":"Ana","linhas_dia":130,"linhas_mes":2530},
+           {"nome":"Bruno","linhas_dia":110,"linhas_mes":2010}
+          ]
+]
+
+
+def produtividade_semana(equipe):
+  dicio = {}
+  for i in range(len(equipe)):
+    for j in range(len(equipe[i])):
+      nome = equipe[i][j]["nome"]
+      linhas_dia = equipe[i][j]["linhas_dia"]
+      if nome not in dicio:
+        dicio[nome] = linhas_dia
+      else:
+        dicio[nome] += linhas_dia
+  return dicio
+print(produtividade_semana(equipe))
+
+def media_produtividade_mes(equipe,semana):
+  soma = 0
+  for i in range(len(equipe[semana])):
+    soma += equipe[semana][i]["linhas_mes"]
+  media = soma / len(equipe[semana])
+  return media
+print(media_produtividade_mes(equipe,0))

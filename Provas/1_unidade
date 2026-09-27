@@ -1,0 +1,48 @@
+time_da_casa = []
+time_adversario = []
+gols_a_favor = []
+gols_contra = []
+
+desejo = input("Deseja inserir um placar? (s/n): ")
+while desejo == "s":
+    time_casa = input("Time da casa: ")
+    time_da_casa.append(time_casa)
+    time_contra = input("Time adversário: ")
+    time_adversario.append(time_contra)
+    
+    gols_casa = int(input("Gols a favor: "))
+    gols_a_favor.append(gols_casa)
+    gols_adversario = int(input("Gols contra: "))
+    gols_contra.append(gols_adversario)
+    
+    desejo = input("Deseja inserir um placar? (s/n): ")
+
+pontuacao = {}
+
+for i in range(len(gols_a_favor)):
+    casa = time_da_casa[i]
+    fora = time_adversario[i]
+    
+    if casa not in pontuacao: pontuacao[casa] = 0
+    if fora not in pontuacao: pontuacao[fora] = 0
+    
+    if gols_a_favor[i] > gols_contra[i]:
+        pontuacao[casa] += 3
+    elif gols_a_favor[i] < gols_contra[i]:
+        pontuacao[fora] += 3
+    else:
+        pontuacao[casa] += 1
+        pontuacao[fora] += 1
+
+campeao = ""
+maior_pontuacao = -1
+
+for time in pontuacao:
+    if pontuacao[time] > maior_pontuacao:
+        maior_pontuacao = pontuacao[time]
+        campeao = time
+
+if campeao != "":
+    print(f"\nO time campeão foi {campeao} com {maior_pontuacao} pontos acumulados!")
+else:
+    print("\nNenhum jogo foi registrado.")

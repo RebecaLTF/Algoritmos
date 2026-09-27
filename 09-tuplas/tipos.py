@@ -1,0 +1,8 @@
+tupla1 = (10,)
+print(type(tupla1))
+tupla2 = (10)
+print(type(tupla2))
+tupla3 = ("a")
+print(type(tupla3))
+tupla4 = ("a",)
+print(type(tupla4))

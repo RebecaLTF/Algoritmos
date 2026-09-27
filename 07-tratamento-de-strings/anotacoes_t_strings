@@ -1,0 +1,30 @@
+# string é o nome da variável
+# string.upper() retorna uma string com todas as letras maiúsculas
+# string.lower() retorna uma string com todas as letras minúsculas
+# string.capitalize() retorna a primeira letra da string maiúscula
+# string.strip() retorna um string removendo caracteres em branco do início e do fim
+# string.lstrip() retorna um string removendo caracteres em branco do início
+# string.rstrip() retorna um string removendo caracteres em branco do fim
+# string.count(item)
+# string.replace(old, new) substitui todas as ocorrências do substring old por new
+# string.center(largura) retorna um string centrado em um campo de tamanho largura  CREIO QUE O '()' PRECISAM ESTAR VAZIOS
+# string.ljust() retorna um string justificado à esquerda em um campo de tamanho largura
+# string.rjust() retorna um string justificado à direita em um campo de tamanho largura
+# string.find() retorna o índice mais a esquerda onde o substring item é encontrado
+# string.rfind() retorna o índice mais a direita onde o substring item é encontrado
+# string.index() como find, mas causa erro em tempo de execução caso item não seja encontrado
+# string.rindex() como rfind, mas causa erro em tempo de execução caso item não seja encontrado   CREIO QUE SEJA 'lfind' E NÃO 'rfind'
+# string.title() coloca a letra inicial de cada palavra como maiúscula
+# string.swapcase() coloca as letras maiúsculas como minúsculas e vice-versa
+# string.isupper() verifica se a string dada é totalmente maiúscula
+# string.istitle() verifica se todas as palavras com a primeira letra são maiúsculas
+# string.isalnum() verifica se a string é alfa-numérica, ou seja, contém apenas letras e números  INCOMPLETO
+# string.isalpha() verifica se a string só contém letras
+# string.isdigit() verifica se a string só contém digitos
+# string.isspace() verifica se a string contém apenas espaços # também pode ser usado da seguinte maneira: print('   '.isspace()), saiba que print.('z   '.isspace())=False
+# string.split() separa uma string, o resultado = várias strings separadas
+# string.join() retorna uma string na qual os elementos da sequência de caracteres foram unidos por um s
+# 'other'.join(string.split('a')) vai tirar o 'a' da string, separá-la em duas strings, e depois vai colocar o 'other' onde o 'a' estava anteriormente
+# string.endswith() verifica se uma string termina com uma dada sentença
+# string.startswith verifica se uma string começa com uma dada sentença
+# string.format(name = "John", age = 36) vai retirar {name} e {age} da string original e substituí-los por "John" e 36
